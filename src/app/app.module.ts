@@ -14,7 +14,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader'; 
+import { HttpClient } from '@angular/common/http'; 
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 
+export function HttpLoaderFactory(http: HttpClient) 
+{
+   return new TranslateHttpLoader(http, './assets/', '.json'); 
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +38,11 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     MatInputModule,
     MatSelectModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    TranslateModule.forRoot({ 
+      loader: { provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                 deps: [HttpClient] } })
   ],
   providers: [
     provideAnimationsAsync()

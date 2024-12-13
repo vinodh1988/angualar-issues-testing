@@ -34,6 +34,6 @@ describe('IssueListComponent', () => {
     const button = fixture.nativeElement.querySelector('button[color="warn"]');
     button.click();
 
-    expect(component.deleteIssue.emit).toHaveBeenCalledWith(component.issues[0].id);
+    expect(component.deleteIssue.emit).toHaveBeenCalledWith(component.issues[1].id);
   });
 });

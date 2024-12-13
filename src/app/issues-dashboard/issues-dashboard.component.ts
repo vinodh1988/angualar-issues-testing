@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IssueService } from '../services/issue.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-issues-dashboard',
@@ -7,13 +8,15 @@ import { IssueService } from '../services/issue.service';
   styleUrls: ['./issues-dashboard.component.css']
 })
 export class IssuesDashboardComponent implements OnInit {
+  language:string="en"
   issues: any[] = [];
   selectedIssue: any = {description:"",status:""};
 
-  constructor(private issueService: IssueService) {}
+  constructor(private issueService: IssueService,private ts:TranslateService) {}
 
   ngOnInit(): void {
     this.loadIssues();
+    this.ts.use(this.language);
   }
 
   loadIssues(): void {
@@ -37,5 +40,9 @@ export class IssuesDashboardComponent implements OnInit {
 
   onDeleteIssue(id: number): void {
     this.issueService.deleteIssue(id).subscribe(() => this.loadIssues());
+  }
+
+  changeLanguage(){
+    this.ts.use(this.language);
   }
 }

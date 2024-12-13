@@ -1,6 +1,7 @@
 <form (ngSubmit)="saveIssue()" >
     <div>
-      <label for="description" >Description</label>
+      <label for="description" >{{"DESCRIPTION"|translate}}
+      </label>
       <input
         type="text"
         id="description"
@@ -11,7 +12,7 @@
     </div>
   
     <div>
-      <label for="status" >Status</label>
+      <label for="status" >{{"STATUS" | translate}}</label>
       <select
         id="status"
         [(ngModel)]="issue.status"
@@ -24,6 +25,6 @@
       </select>
     </div>
   
-    <button type="submit" >Save</button>
+    <button type="submit" >{{"SAVE"|translate}}</button>
   </form>
   

@@ -1,8 +1,8 @@
 <mat-list>
     <mat-list-item *ngFor="let issue of issues">
       <span>{{ issue.description }} ({{ issue.status }})</span>
-      <button mat-raised-button color="primary" (click)="editIssue.emit(issue)" >Edit</button>
-      <button mat-raised-button color="warn" (click)="deleteIssue.emit(issue.id)" >Delete</button>
+      <button mat-raised-button color="primary" (click)="editIssue.emit(issue)" >{{"EDIT" | translate}}</button>
+      <button mat-raised-button color="warn" (click)="deleteIssue.emit(issue.id)" >{{"DELETE" | translate }}</button>
     </mat-list-item>
   </mat-list>
   

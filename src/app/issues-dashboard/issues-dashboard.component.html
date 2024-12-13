@@ -1,3 +1,10 @@
+<select [(ngModel)]="language" (change)="changeLanguage()">
+    <option value="en">English</option>
+    <option value="ta">Tamil</option>
+    <option value="hi">Hindi</option>
+    <option value="te">Telugu</option>
+    <option value="kn">Kannada</option>
+</select>
 <app-issue-list 
   [issues]="issues" 
   (editIssue)="onEditIssue($event)" 

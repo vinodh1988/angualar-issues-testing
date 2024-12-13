@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-issue-list',
@@ -9,4 +10,8 @@ export class IssueListComponent {
   @Input() issues: any[] = [];
   @Output() editIssue = new EventEmitter<any>();
   @Output() deleteIssue = new EventEmitter<number>();
+
+  constructor(){
+    
+  }
 }
