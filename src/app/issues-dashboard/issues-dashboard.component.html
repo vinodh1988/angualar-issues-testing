@@ -1,0 +1,10 @@
+<app-issue-list 
+  [issues]="issues" 
+  (editIssue)="onEditIssue($event)" 
+  (deleteIssue)="onDeleteIssue($event)">
+</app-issue-list>
+
+<app-issue-form 
+  [selectedIssue]="selectedIssue" 
+  (sendIssue)="onSaveIssue($event)">
+</app-issue-form>

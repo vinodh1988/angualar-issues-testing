@@ -1,0 +1,54 @@
+mat-list {
+    max-width: 600px; /* Restrict maximum width */
+    margin: 20px auto; /* Center the list horizontally */
+    padding: 0; /* Remove default padding */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  mat-list-item {
+    display: flex;
+    align-items: center; /* Align content vertically */
+    justify-content: space-between; /* Space out content */
+    padding: 10px 15px; /* Add padding */
+    border-bottom: 1px solid #e0e0e0; /* Divider between items */
+  }
+  
+  mat-list-item:last-child {
+    border-bottom: none; /* Remove border for the last item */
+  }
+  
+  mat-list-item span {
+    font-size: 16px; /* Adjust font size for readability */
+    font-weight: 500; /* Slightly bold */
+    color: #333; /* Text color */
+    flex-grow: 1; /* Take up remaining space */
+  }
+  
+  button {
+    margin-left: 8px; /* Spacing between buttons */
+  }
+  
+  button.mat-raised-button {
+    min-width: 70px; /* Consistent button size */
+  }
+  
+  button[color="warn"] {
+    background-color: #f44336; /* Custom warning color */
+    color: white; /* Text color for contrast */
+  }
+  
+  button[color="warn"]:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+  }
+  
+  button[color="primary"] {
+    background-color: #1976d2; /* Custom primary color */
+    color: white; /* Text color for contrast */
+  }
+  
+  button[color="primary"]:hover {
+    background-color: #1565c0; /* Darker blue on hover */
+  }
+  

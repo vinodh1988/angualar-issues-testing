@@ -1,0 +1,29 @@
+<form (ngSubmit)="saveIssue()" >
+    <div>
+      <label for="description" >Description</label>
+      <input
+        type="text"
+        id="description"
+        [(ngModel)]="issue.description"
+        name="description"
+        required
+      />
+    </div>
+  
+    <div>
+      <label for="status" >Status</label>
+      <select
+        id="status"
+        [(ngModel)]="issue.status"
+        name="status"
+        required
+      >
+        <option value="" disabled selected>Select a status</option>
+        <option value="open">Open</option>
+        <option value="closed">Closed</option>
+      </select>
+    </div>
+  
+    <button type="submit" >Save</button>
+  </form>
+  
